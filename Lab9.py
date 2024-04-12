@@ -7,20 +7,25 @@ def encode(password):
         encoded_password += new_digit
     return encoded_password
 
+def decode(encoded):
+    password = []
+    for num in encoded:
+        password.append(str(int(num)-3))
+    return ''.join(password)
+
 while True:
     print("Menu \n____________\n1. Encode \n2. Decode \n3. Quit\n")
     choice = input("Please enter an option:")
-    if choice == 1:
+    if choice == "1":
         password = input("Please enter your password to encode:")
         encoded = encode(password)
         print("Your password has been encoded and stored!")
-    elif choice ==2:
+    elif choice == "2":
         decoded = decode(encoded)
         print(f"The encoded password is {encoded}, and the original password is {decoded}")
         pass
-    elif choice ==3:
+    elif choice == "3":
         break
-
 
 
 
