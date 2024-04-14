@@ -30,6 +30,6 @@ def decode(encoded_password):
         decoded_password += new_digit
     return decoded_password
 
-
+bd
 
 
